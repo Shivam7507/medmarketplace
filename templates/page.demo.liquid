@@ -1,0 +1,67 @@
+
+{{ page.title }}
+
+<br>
+
+{% assign my_variable = false %}
+{% if my_variable != true %}
+  This statement is valid.
+{% endif %}
+
+<br>
+
+{% assign foo = "bar" %}
+{{ foo }}
+
+<br>
+
+{% capture my_variable %}I am being captured.{% endcapture %}
+{{ my_variable }}
+
+<br>
+
+{% assign favorite_food = "pizza" %}
+{% assign age = 35 %}
+
+{% capture about_me %}
+I am {{ age }} and my favorite food is {{ favorite_food }}.
+{% endcapture %}
+
+{{ about_me }}
+
+<br>
+
+{% increment my_counter %}
+{% increment my_counter %}
+{% increment my_counter %}
+
+<br>
+
+{% assign var = 10 %}
+{% increment var %}
+{% increment var %}
+{% increment var %}
+{{ var }}
+
+<br>
+{% decrement variable %}
+{% decrement variable %}
+{% decrement variable %}
+
+<br>
+
+{% for product in collection.products %}
+  {{ product.title }}
+{% endfor %}
+
+<br>
+
+{% for product in collection.products %}
+  {{ product.title }}
+{% else %}
+  The collection is empty.
+{% endfor %}
+
+
+
+
